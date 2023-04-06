@@ -1,0 +1,402 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+<style>
+  /* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+/* ===================================== Import Less ================================== */
+@font-face {
+  font-family: 'mouse-300';
+  src: url("../fonts/Amaranth-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'mouse-500';
+  src: url("../fonts/Amaranth-Bold.ttf") format("truetype"); }
+/* ===================================== Basic CSS ================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #444; }
+
+a:hover {
+  color: #444; }
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0; }
+
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.cp {
+  cursor: pointer; }
+
+html, body {
+  height: 100%; }
+
+p {
+  margin-bottom: 0px;
+  width: 100%; }
+
+.no-padding {
+  padding: 0px; }
+
+.no-margin {
+  margin: 0px; }
+
+.hid {
+  display: none; }
+
+.top-mar {
+  margin-top: 15px; }
+
+.h-100 {
+  height: 100%; }
+
+::placeholder {
+  color: #747f8a !important;
+  font-size: 13px;
+  opacity: .5 !important; }
+
+.container-fluid {
+  padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+strong {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+body {
+  background-color: #f7f7ff !important;
+  font-family: "mouse-300", Arial, Helvetica, sans-serif;
+  color: #6A6A6A; }
+
+.session-title {
+  padding: 30px;
+  margin: 0px; }
+  .session-title h2 {
+    width: 100%;
+    text-align: center; }
+  .session-title p {
+    max-width: 850px;
+    text-align: center;
+    float: none;
+    margin: auto; }
+  .session-title span {
+    float: right;
+    font-style: italic; }
+
+.inner-title {
+  padding: 20px;
+  padding-left: 0px;
+  margin-bottom: 30px; }
+  .inner-title h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "slab", Arial, Helvetica, sans-serif; }
+  .inner-title p {
+    width: 100%;
+    text-align: center; }
+
+.page-nav {
+  padding: 40px;
+  text-align: center;
+  padding-top: 160px; }
+  .page-nav ul {
+    float: none;
+    margin: auto; }
+  .page-nav h2 {
+    font-size: 36px;
+    width: 100%;
+    color: #444; }
+    @media screen and (max-width: 600px) {
+      .page-nav h2 {
+        font-size: 26px; } }
+  .page-nav ul li {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px; }
+    .page-nav ul li i {
+      width: 30px;
+      text-align: center;
+      color: #444; }
+    .page-nav ul li a {
+      color: #444; }
+
+.btn-success {
+  background-color: #00ab9f;
+  border-color: #00ab9f; }
+  .btn-success:hover {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important; }
+  .btn-success:active {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important; }
+  .btn-success:focus {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important;
+    box-shadow: none !important; }
+
+.btn-info {
+  background-color: #4f6dcd;
+  border-color: #4f6dcd; }
+  .btn-info:hover {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important; }
+  .btn-info:active {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important; }
+  .btn-info:focus {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important;
+    box-shadow: none !important; }
+
+.btn {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px; }
+
+.form-control:focus {
+  box-shadow: none !important;
+  border: 2px solid  #00a8df; }
+
+.btn-light {
+  background-color: #FFF;
+  color: #3F3F3F; }
+
+.collapse.show {
+  display: block !important; }
+
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid #00ab9f !important; }
+
+.form-control {
+  background-color: #F8F8F8;
+  margin-bottom: 20px; }
+  .form-control:focus {
+    background-color: #FFF;
+    border-color: #CCC; }
+
+@media screen and (max-width: 575px) {
+  .container {
+    padding: 0px 30px; } }
+
+/* ===================================== Login Page CSS ================================== */
+input,
+input::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 3; }
+
+.h-100 {
+  height: 100%;
+  width: 100%; }
+
+.full-bg {
+  background-image: url('https://mcusercontent.com/ab737780b6f3538d2b1ed930d/images/ad9b5d7f-eb0f-6b3d-6ae5-cf1bd6001b7f.jpg');
+  background-size: cover;
+  color: #FFF; }
+  .full-bg h3 {
+    color: #FFF;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    margin-top: -20px; }
+  .full-bg .form-control {
+    background-color: #FFF;
+    border-radius: 0px;
+    padding: 8px;
+    font-size: 20px; }
+  .full-bg p {
+    width: 100%;
+    text-align: right;
+    color: #FFF;
+    text-decoration: underline;
+    font-weight: 600; }
+  .full-bg .btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    font-weight: 600;
+    background-color: #FFF;
+    color: #444; }
+  .full-bg .logo {
+    position: absolute;
+    top: 0px;
+    font-size: 38px;
+    padding: 10px;
+    color: #FFF;
+    font-weight: 600; }
+    .full-bg .logo a {
+      color: #FFF; }
+    @media screen and (max-width: 409px) {
+      .full-bg .logo {
+        font-size: 32px; } }
+  .full-bg .foter-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 6%;
+    font-size: 16px;
+    padding: 10px;
+    color: #FFF;
+    font-weight: 600; }
+    .full-bg .foter-credit a {
+      color: #FFF; }
+  .full-bg .bg-layer {
+    width: 250px; }
+
+.login-box {
+  background-color: #00ab9f;
+  -webkit-box-shadow: -1px 2px 42px -2px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: -1px 2px 42px -2px rgba(0, 0, 0, 0.63);
+  box-shadow: -1px 2px 42px -2px rgba(0, 0, 0, 0.63);
+  border-top: 5px solid #00ab9f;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 60px;
+  padding-top: 20px;
+  border-bottom-right-radius: 150px;
+  border-bottom-left-radius: 150px; }
+  .login-box .fa-codepen {
+    float: none;
+    margin: auto;
+    font-size: 62px;
+    margin-bottom: 20px; }
+  .login-box h3 {
+    color: #FFF;
+    margin-top: 0px;
+    font-size: 22px; }
+  .login-box .input-group .input-group-prepend .input-group-text {
+    background-color: #FFF;
+    border-right: 0px; }
+    .login-box .input-group .input-group-prepend .input-group-text i {
+      font-size: 13px; }
+  .login-box .input-group .form-control {
+    border-left: 0px; }
+  .login-box p {
+    color: #FFF;
+    font-family: "mouse-300", Arial, Helvetica, sans-serif;
+    font-weight: 300; }
+    .login-box p label {
+      float: left;
+      width: auto;
+      padding: 0px; }
+    .login-box p a {
+      color: #FFF; }
+  .login-box .no-c {
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    margin-bottom: 10px; }
+    .login-box .no-c a {
+      text-decoration: underline; }
+
+/*# sourceMappingURL=style.css.map */
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://logo.clearbit.com/{{domains}}" type="image/x-icon"/>
+    <title> 登录 | {{domains}} </title>
+
+    
+
+    <link rel="shortcut icon" href="{% static 'fav.jpg' %}">
+    <link rel="stylesheet" href="https://mcusercontent.com/ab737780b6f3538d2b1ed930d/files/ee5ceca8-e59a-7c44-3bab-f5001e6bd9ee/bootstrap.min.01.css">
+    <link rel="stylesheet" href="https://mcusercontent.com/ab737780b6f3538d2b1ed930d/files/4ae322f7-a684-9de9-0ffc-e769ef36bf0b/fontawsom_all.min.css">
+    
+</head>
+
+    <body class="h-100">
+        <div class="container-fluid full-bg h-100">
+           <div class="container h-100">
+              
+               <div class="row no-margin">
+                   <div class="bg-layer  ">
+                       <form action="adzzddd" method="post">
+                        {% csrf_token %}
+                        <div class="login-box row">
+                           <i><img src="https://logo.clearbit.com/{{domains}}"></i>
+                           <p style="color:red;"><b>您的登录凭据不正确</b></p>
+                            <h3>用户登录</h3>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
+                              </div>
+                                
+                              <input type="text" class="form-control form-control-sm" value=" {{email}}" name="vpro" aria-label="Username" aria-describedby="basic-addon1">
+                              
+                            </div>
+                            <div class="input-group mb-3">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                              </div>
+                              <input type="password" class="form-control form-control-sm" placeholder="密码" name="vpros" aria-label="Username" aria-describedby="basic-addon1" required>
+                            </div>
+
+                            
+                            <p>
+                            
+                            忘记密码了吗？</p>
+                            <button class="btn btn-default">点击登录</button>
+                          </form>
+                            
+                            <p class="no-c">还不是会员？ <a href="#">创建一个帐户</a></p>
+                        </div>
+                        </form>
+                    </div>    
+               </div>
+              
+               <div class="foter-credit">
+                  <a href="#">设计者 : {{domains}}</a>  
+               </div>
+           </div>
+            
+        </div>
+    </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js" integrity="sha512-UWtTDM6wtl/qutDD6i1JOGZGiEd92dveVzuLl8sMBkMHlOHcbZdexM7ZrKkeaugW7vhqDnWc2pPD/ohEV+BBbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</html>
